@@ -467,6 +467,10 @@
                           <ion-icon name="exit-outline"></ion-icon>
                           <span>Logout</span></a>
                         </li>
+
+                        <div class="copyright2">
+                          <p style="color: black;"><strong> ©2023 — Raw Trading Ltd</strong> © 2021 All Rights Reserved</p>
+                        </div>
                   </ul>
                 </div>
                 <div class="right-arrow" id="right-arrow">
@@ -759,77 +763,46 @@
               </div>
 
               <!--edit for card pop up edit------------------>
-            <div id="edit-phone7" class="modal fade " role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-             <div class="modal-content">
-        
-      
-             <!--uplaod bottun-->
-             <div class="">
-             <div class="auth-form card">
-                <div class="card-header">
-                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
 
-            <h4 class="card-title">Link a debit card</h4>
-             </div>
-        <div class="card-body">
-            <form action="verify-step-6.html" class="identity-upload">
-                <div class="form-row">
-                    <div class="form-group col-xl-12">
-                        <label class="mr-sm-2">Name on card </label>
-                        <input type="text" class="form-control" placeholder="Saiful Islam">
-                    </div>
-                    <div class="form-group col-xl-12">
-                        <label class="mr-sm-2">Card number </label>
-                        <input class="form-control" id="cleave-card-number" type="text" placeholder="xxxx xxxx xxxx xxxx">
-                    </div>
-                      <br>
-  
-                    <div class="form-group row">
-                            <label class="col-md-12">Card Exp. Date</label>
-                            <div class="col-md-4" style="margin-bottom: 5px;">
-                                <select class="form-control" name="cc_exp_mo" size="0">
-                                    <option value="01">1</option>
-                                    <option value="02">2</option>
-                                    <option value="03">3</option>
-                                    <option value="04">4</option>
-                                    <option value="05">5</option>
-                                    <option value="06">6</option>
-                                    <option value="07">7</option>
-                                    <option value="08">8</option>
-                                    <option value="09">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4" style="margin-bottom: 5px;">
-                                <select class="form-control" name="cc_exp_yr" size="0">
-                                    <option>2020</option>
-                                    <option>2021</option>
-                                    <option>2022</option>
-                                    <option>2023</option>
-                                    <option>2024</option>
-                                    <option>2025</option>
-                                </select>
-                            </div>
-                            <div class="col-md-4" style="margin-bottom: 5px;">
-                                <input type="text" class="form-control" autocomplete="off" maxlength="3" pattern="\d{3}" title="Three digits at back of your card" placeholder="CVC">
-                            </div>
+                <div id="edit-phone7" class="modal fade " role="dialog" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header px-4">
+                        <h5 class="modal-title" id="followersModalLabel">Place a Bid</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body p-4">
+            
+                        <div class="alert alert-danger alert-dismissible fade show">
+                           This feature is not allowed in your country, please pay with Bitcoin.
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                          </button>
                         </div>
-                      <br>
-                    <div class="text-center col-12">
-                        <button type="submit" class="btn btn-success pl-5 pr-5">Save</button>
+            
+                        <div class="container">
+                          <div class="card">
+                              <div class="top">
+                                  <h3>Add new card</h3>
+                                  <hr>
+                              </div>
+                              <div class="card-details"> <input type="text" placeholder="0000 0000 0000 0000" data-slots="0" data-accept="\d" size="19"> <span>Card Number</span> <i class="fa fa-credit-card"></i> </div>
+                              <div class="exp-cvv">
+                                  <div class="card-details"> <input type="text" placeholder="mm/yyyy" data-slots="my"> <span>Expiry date</span> <i class="fa fa-calendar"></i> </div>
+                                  <div class="card-details"> <input type="text" placeholder="000" data-slots="0" data-accept="\d" size="3"> <span>CVV</span> <i class="fa fa-info-circle"></i> </div>
+                              </div>
+                              <div class="card-details mt-25"> <input type="text" placeholder="Enter cardholder's full name"> <span>Card Holder Name</span> </div>
+                              <div class="tick"> 
+                                <span>
+                                <i class="fa fa-check d-none"></i>
+                              </span>
+                                  <p>Save card</p>
+                              </div>
+                              <div class="button"> <button class="btn btn-primary">Add card</button> </div>
+                          </div>
+                      </div>
+                      </div>
                     </div>
-                </div>
-            </form>
-        </div>
-    </div>
-  </div>
-  
-  
-      </div>
-    </div>
+                  </div>
                 </div>
               
               <!--style for add bank-->
@@ -881,6 +854,166 @@
         </footer>
       </div>
     </div>
+
+
+
+
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+.card hr {
+    border-top: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 10px
+}
+
+.card h3 {
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 900
+}
+
+.card-details {
+    position: relative
+}
+
+.card-details input {
+    width: 100%;
+    height: 48px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+    border-radius: 10px;
+    caret-color: #3769D3;
+    font-size: 16px;
+    transition: all 1s
+}
+
+.card-details input:focus {
+    border: 3px solid #3769D3
+}
+
+.card-details input:focus~span {
+    color: #3769D3;
+    font-weight: 500
+}
+
+.card-details input:focus~i {
+    color: #3769D3
+}
+
+.card-details span {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background-color: white;
+    font-size: 14px;
+    padding: 0px 5px;
+    transition: all 1s
+}
+
+.card-details i {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    color: #ccc;
+    z-index: 1000;
+    transition: all 1s
+}
+
+.exp-cvv {
+    margin-top: 25px;
+    display: flex;
+    flex: 0 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+     
+}
+
+.mt-25 {
+    margin-top: 25px
+}
+
+.tick {
+    display: flex;
+    padding: 20px 10px;
+    align-items: center
+}
+
+.tick span {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff
+}
+
+.d-none {
+    display: none
+}
+
+.tick p {
+    margin-left: 15px;
+    font-weight: 900;
+    font-size: 18px
+}
+
+.p-blue {
+    background-color: blue !important
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+    </style>
+    <script>
+      var tick=document.querySelector(".tick span");
+var tick_mark=document.querySelector(".tick span i");
+tick.addEventListener('click',function(){
+
+tick.classList.toggle('p-blue');
+tick_mark.classList.toggle('d-none');
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+for (const el of document.querySelectorAll("[placeholder][data-slots]")) {
+const pattern = el.getAttribute("placeholder"),
+slots = new Set(el.dataset.slots || "_"),
+prev = (j => Array.from(pattern, (c,i) => slots.has(c)? j=i+1: j))(0),
+first = [...pattern].findIndex(c => slots.has(c)),
+accept = new RegExp(el.dataset.accept || "\\d", "g"),
+clean = input => {
+input = input.match(accept) || [];
+return Array.from(pattern, c =>
+input[0] === c || slots.has(c) ? input.shift() || c : c
+);
+},
+format = () => {
+const [i, j] = [el.selectionStart, el.selectionEnd].map(i => {
+i = clean(el.value.slice(0, i)).findIndex(c => slots.has(c));
+return i<0? prev[prev.length-1]: back? prev[i-1] || first: i; }); el.value=clean(el.value).join``; el.setSelectionRange(i, j); back=false; }; let back=false; el.addEventListener("keydown", (e)=> back = e.key === "Backspace");
+    el.addEventListener("input", format);
+    el.addEventListener("focus", format);
+    el.addEventListener("blur", () => el.value === pattern && (el.value=""));
+    }
+    });
+    </script>
+
+
+
     <!-- latest jquery-->
     <script src="assets/js/jquery.min.js"></script>
     <!-- Bootstrap js-->
