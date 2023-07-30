@@ -467,6 +467,11 @@
                       <ion-icon name="exit-outline"></ion-icon>
                       <span>Logout</span></a>
                     </li>
+
+                    <div class="copyright2">
+                      <p style="color: black;"><strong> ©2023 — Raw Trading Ltd</strong> © 2021 All Rights Reserved</p>
+                    </div>
+                    
               </ul>
             </div>
             <div class="right-arrow" id="right-arrow">
@@ -1230,25 +1235,28 @@
                        <div id="edit-phone5" class="modal fade " role="dialog" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title fw-400">Email verification</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <!--opt option-->
-                            <div class="auth-form card">
-                                <div class="card-body">
-                                    <a class="page-back text-muted" href="otp-1.html"><span><i class="fa fa-angle-left"></i></span> Back</a>
-                                    <h3 class="text-center">OTP Verification</h3>
-                                    <p class="text-center mb-5">We will send one time code on this Email</p>
-                                    <form action="index.html">
-                                        <div class="form-group form-groupp">
-                                            <label>Your OTP Code</label>
-                                            <input type="text" class="form-control text-center font-weight-bold" value="11 22 33">
-                                        </div>
-                                        <div class="text-center">
-                                            <button type="submit" class="btn btn-success btn-block">Verify</button>
-                                        </div>
-                                    </form>
-                                    <div class="info mt-3">
-                                        <p class="text-muted">You dont recommended to save password to browsers!</p>
+                            <div class="modal-body">
+                              <div >
+                                <div class="card-wrapper border rounded-3 h-100">
+                                  <div class="row g-1"> 
+                                    <div class="col-xxl-4 box-col-5">
+                                      <div class="authenticate"><img class="img-fluid" src="assets/images/forms/email.png" alt=""></div>
                                     </div>
+                                    <div class="col-xxl-8 box-col-7">
+                                      <h4>Email verification</h4>
+                                      <p>A verification code has been sent to your email. This code will be valid for 15 minutes.</p>
+                                      <div class="input-group mb-3">
+                                        <input class="form-control" type="text" placeholder="Please enter the code here" aria-label="basic-addon2" aria-describedby="basic-addon2"><span class="input-group-text bg-primary" id="basic-addon2">Verify</span>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
+                              </div>
                             </div>
                 
             
@@ -1282,7 +1290,7 @@
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title fw-400">Phone</h5>
+                              <h5 class="modal-title fw-400">Phone verification</h5>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body p-4">
@@ -1807,25 +1815,40 @@
                       <div id="edit-phone4" class="modal fade " role="dialog" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle1">Phone</h5>
+                              <button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <!--opt option-->
-                            <div class="auth-form card">
-                                <div class="card-body">
-                                    <a class="page-back text-muted" href="otp-1.html"><span><i class="fa fa-angle-left"></i></span> Back</a>
-                                    <h3 class="text-center">OTP Verification</h3>
-                                    <p class="text-center mb-5">We will send one time code on this number</p>
-                                    <form action="index.html">
-                                        <div class="form-group form-groupp">
-                                            <label>Your OTP Code</label>
-                                            <input type="text" class="form-control text-center font-weight-bold" value="11 22 33">
-                                        </div>
-                                        <div class="text-center">
-                                            <button type="submit" class="btn btn-success btn-block">Verify</button>
-                                        </div>
+                            <div class="">
+
+                              <div class="modal-body">
+                                <div class="card-wrapper border rounded-3 h-100">
+                                  <div class="authenticate">
+                                    <h4>Verification code</h4>
+                                    <img class="img-fluid" src="assets/images/forms/authenticate.png" alt="authenticate">
+                                    <span>We've sent a verification code to</span><span>+1**********</span>
+                                    <form class="row">
+                                      <div class="col"> 
+                                        <h5>Your OTP Code here:</h5>
+                                      </div>
+                                      <div class="col otp-generate">
+                                        <input class="form-control code-input" type="text" maxlength="1" pattern="[0-9]" required="">
+                                        <input class="form-control code-input" type="text" maxlength="1" pattern="[0-9]" required="">
+                                        <input class="form-control code-input" type="text" maxlength="1" pattern="[0-9]" required="">
+                                        <input class="form-control code-input" type="text" maxlength="1" pattern="[0-9]" required="">
+                                        <input class="form-control code-input" type="text" maxlength="1" pattern="[0-9]" required="">
+                                        <input class="form-control code-input" type="text" maxlength="1" pattern="[0-9]" required="">
+                                      </div>
+                                      <div class="col"> 
+                                        <button class="btn btn-primary w-100" type="submit">Verify</button>
+                                      </div>
+                                      <div> <span>Not received your code?</span><span><a href="javascript:void(0)">Resend </a>OR <a href="javascript:void(0)">Call  </a></span></div>
                                     </form>
-                                    <div class="info mt-3">
-                                        <p class="text-muted">You dont recommended to save password to browsers!</p>
-                                    </div>
+                                  </div>
                                 </div>
+                              </div>
+
                             </div>
                 
             
@@ -1886,13 +1909,15 @@
                       <div id="edit-phone2" class="modal fade " role="dialog" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                           <div class="modal-content">
-                            
+                            <div class="modal-header">
+                              <button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                            
                      <!--uplaod bottun-->
 
-                               <div class="">
-                                  <div class="auth-form card">
-                                    <div class="card-body">
+                               <div class="modal-body">
+                                  <div class="auth-form ">
+                                    <div class="">
                                <form action="verify-step-3.html" class="identity-upload">
 
                         <div class="identity-content">
@@ -1938,9 +1963,9 @@
                         
                       
                 <!--uplaod bottun-->
-                <div class="">
-                  <div class="auth-form card">
-                      <div class="card-body">
+                <div class="modal-body">
+                  <div class="auth-form ">
+                      <div class="">
                           <form action="add-debit-card.html" class="identity-upload">
                               <div class="identity-content">
                                   <span class="icon"><i class="fa fa-check"></i></span>
