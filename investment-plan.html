@@ -48,7 +48,9 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  </head>
+  
+      <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    </head>
   <body onload="startTime()"> 
     <!-- loader starts-->
     <div class="loader-wrapper">
@@ -467,6 +469,11 @@
                         <ion-icon name="exit-outline"></ion-icon>
                         <span>Logout</span></a>
                       </li>
+
+                      <div class="copyright2">
+                        <p style="color: black;"><strong> ©2023 — Raw Trading Ltd</strong> © 2021 All Rights Reserved</p>
+                      </div>
+                      
                 </ul>
               </div>
               <div class="right-arrow" id="right-arrow">
@@ -523,7 +530,7 @@
                         <div class="card small-widget"> 
                           <div class="card-body primary"> <span class="f-light">Ethereum</span>
                             <div class="d-flex align-items-end gap-1">
-                              <h4>$<span id="ethereum"></span></h4><span class="font-primary f-12 f-w-500"><ion-icon name="arrow-up-outline"></ion-icon><span>+50%</span></span>
+                              <h4>$0.00</h4><span class="font-primary f-12 f-w-500"><i class='bx bxs-bell-plus bx-tada bx-flip-horizontal' ></i><span id="ethereum"></span></span>
                             </div>
                             <div class="bg-gradient"> 
                               <img style="width: 60%;" class="stroke-icon svg-fill" src="assets/images/icons8-cryptocurrency-48.png" alt="">
@@ -535,7 +542,7 @@
                         <div class="card small-widget"> 
                           <div class="card-body warning"><span class="f-light">Bitcoin</span>
                             <div class="d-flex align-items-end gap-1">
-                              <h4>$<span id="bitcoin"></span></h4><span class="font-warning f-12 f-w-500"><ion-icon name="arrow-up-outline"></ion-icon><span>+20%</span></span>
+                              <h4>$0.00</h4><span class="font-warning f-12 f-w-500"><i class='bx bxs-bell-plus bx-tada bx-flip-horizontal' ></i><span id="bitcoin"></span></span>
                             </div>
                             <div class="bg-gradient"> 
                                 <img class="stroke-icon svg-fill" src="assets/images/1.svg" alt="">
@@ -547,7 +554,7 @@
                         <div class="card small-widget"> 
                           <div class="card-body secondary"><span class="f-light">Tether</span>
                             <div class="d-flex align-items-end gap-1">
-                              <h4>$<span id="dogecoin"></span></h4><span class="font-secondary f-12 f-w-500"><ion-icon name="arrow-down-outline"></ion-icon><span>-10%</span></span>
+                              <h4>$0.00</h4><span class="font-secondary f-12 f-w-500"><i class='bx bxs-bell-plus bx-tada bx-flip-horizontal' ></i><span id="dogecoin"></span></span>
                             </div>
                             <div class="bg-gradient"> 
                                 <img class="stroke-icon svg-fill" src="assets/images/icon there.png" alt="" style="width: 60%;" >
@@ -559,7 +566,7 @@
                         <div class="card small-widget"> 
                           <div class="card-body success"><span class="f-light">Litecoin</span>
                             <div class="d-flex align-items-end gap-1">
-                              <h4>$<span id="litecoin"></span></h4><span class="font-success f-12 f-w-500"><ion-icon name="arrow-up-outline"></ion-icon><span>+80%</span></span>
+                              <h4>$0.00</h4><span class="font-success f-12 f-w-500"><i class='bx bxs-bell-plus bx-tada bx-flip-horizontal' ></i><span id="litecoin"></span></span>
                             </div>
                             <div class="bg-gradient"> 
                                 <img class="stroke-icon svg-fill" src="assets/images/2.svg" alt="">
@@ -783,114 +790,17 @@
                                   </div>
                                   <!---end Div for cart check out-->
 
-                                      <!--- Div for hidden payment form-->
-                                  <div class="modal fade" id="tooltipmodal" tabindex="-1" aria-labelledby="tooltipmodal" aria-hidden="true" style="display: none;">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                      <div class="modal-content">
-
-                                           <div class="modal-content"> 
-                                       <div class="modal-body" > 
-                                         
-                            <button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close">
-                                <i class="fa fa-close close" data-dismiss="modal" style="cursor: pointer;"></i>
-                            </button>
-
-                             <div class="tabs mt-3">
-                                <ul class="simple-wrapper nav nav-tabs" id="myTab" role="tablist"> 
-                    
-                              <li class="nav-item" role="presentation"> 
-                               <a class="nav-link active" id="home-tab" role="tab" tabindex="-1"  data-toggle="tab" href="#home"  aria-controls="home" aria-controls="visa" aria-selected="false" > 
-                              <h5><img src="assets/images/1.svg" alt="">  Pay via Bitcoin</h5>
-                               </a> 
-                             </li>
-                             
-                             <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="profile-tabs"   data-toggle="tab" href="#profile" role="tab"  aria-controls="profile" aria-selected="true"> 
-                                   <img src="https://i.imgur.com/sB4jftM.png" width="80"></a> 
-                               </li>
-                              </ul>
-
-
-
-
-
-                              <div class="tab-content" id="myTabContent"> 
-                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
-                                  <div class="mt-4 mx-4"> 
-                    
-                                  <div class="text-center">
-                                     <h5>Pay for the package</h5> 
-                                    </div>
-                    
-                                   <div class="form mt-3"> 
-                                    <div class="copy-address">
-                                      <span class="l">Send To Address:</span>
-                                      <div class="field">
-                                          <input class="form-control" id = "content"  spellcheck="false" type="text" id="myInput1" value="3JbVqM8NGTuvfuB2LWJQAQFsbyej81vbYx" style="width:100%; color:black">
-                                      </div>
-                                        </div>
-                                      <div class="qr-code">
-                                         <div class="qr-code1 text-center" style="margin: 5px;">
-                                            <button type = "button" style="margin-bottom: 9px;" class ="center-block button" id = "generate">  
-                                              Generate QR Code 
-                                            </button>  
-                                            
-                                            <button type="button" class="butss button" >  
-                                              Download QR Code 
-                                            </button>  
-                    
-                                          </div>
-                                          
-                                            <div class="qr text-center" id="qr-code" >
-                                                <img src =  ""   class = "qr-code downloadimage img-thumbnail img-responsive" />       
-                                            </div>
-                                          </div>
-                                           <br>
-                                          <div class="px-5 pay text-center">
-                                         <button onclick="copyText()" onmouseout="outFunc()" class="btn btn-success btn-block">Copy Address</button> 
-                                          </div>
-                                           </div> 
-                    
-                                           
-                                          </div> 
-                                        </div> 
-                    
-                                   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tabs"> 
-                                    <div class="px-5 mt-5"> 
-                                   
-                              
-                                      <div class="text-center"><p style="display: none;" class="error11" id="result1" ></p></div>
-                    
-                                      
-                              <div class="pay px-5">
-                               <button class="btn btn-primary btn-block"  id="go1"  onclick="copyTg()" type="submit" >Add Card</button> 
-                              </div> 
-                    
-                                </div> 
-                    
-                              </div>
-                             </div> 
-                            </div> 
-                          </div> 
-                        </div> 
-
-                                      </div>
-                                    </div>
-                                  </div>
-                                      <!---end Div for hidden payment form-->
-
-
+                                  
 
                                       <!--div for payment button-->
                                   <div class="payment-info" id="mybox"  style="display: none;">                      
                                     <div class="row1"  style="margin-top: 40px;">
                  
-                                      <div class="alert alert-warning alert-dismissible fade show">
-                                           <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="me-2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                                      <div class="alert alert-warning alert-dismissible fade show text-danger border-left-wrapper">
                                             Use the address below or QR code to make payment via your crypto wallet. After network confirmations, your order will be automatically activated.
-                                           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close">
-                                            </button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                            </div>
+                                           
                                 <div style="margin: auto;text-align: center; padding-bottom: 30px;">
                                     <button class="btn btn-info-gradien" type="button" data-bs-toggle="modal" data-bs-target="#tooltipmodal"> 
                                         <i class="fa fa-rocket"></i> Pay Now</button>
@@ -1239,8 +1149,7 @@
                 <div class="">
                   <div class="bg-white shadow-sm rounded p-3 pt-sm-4 pb-sm-5 px-sm-5 mb-4">
                     <button type="button" class="btn-close float-end " data-bs-dismiss="modal" aria-label="Close">
-                      <i class="fa fa-times" aria-hidden="true"></i>
-
+                    
                     </button>
                     <h6 class="text-5 fw-400 mb-3 mb-sm-4">SambaNova Systems</h6>
                     <hr class="mx-n3 mx-sm-n5 mb-4">
@@ -1301,7 +1210,6 @@
                 <div class="">
                   <div class="bg-white shadow-sm rounded p-3 pt-sm-4 pb-sm-5 px-sm-5 mb-4">
                     <button type="button" class="btn-close float-end " data-bs-dismiss="modal" aria-label="Close">
-                      <i class="fa fa-times" aria-hidden="true"></i>
 
                     </button>
                     <h6 class="text-5 fw-400 mb-3 mb-sm-4">Farmer's Business
@@ -1366,9 +1274,7 @@
               <div class="">
                   <div class="">
                     <div class="bg-white shadow-sm rounded p-3 pt-sm-4 pb-sm-5 px-sm-5 mb-4">
-                      <button type="button" class="btn-close float-end " data-bs-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-  
+                      <button type="button" class="btn-close float-end " data-bs-dismiss="modal" aria-label="Close">  
                       </button>
                       <h6 class="text-5 fw-400 mb-3 mb-sm-4">Mark43
 
@@ -1429,9 +1335,7 @@
                 <div class="">
                     <div class="">
                       <div class="bg-white shadow-sm rounded p-3 pt-sm-4 pb-sm-5 px-sm-5 mb-4">
-                        <button type="button" class="btn-close float-end " data-bs-dismiss="modal" aria-label="Close">
-                          <i class="fa fa-times" aria-hidden="true"></i>
-    
+                        <button type="button" class="btn-close float-end " data-bs-dismiss="modal" aria-label="Close">    
                         </button>
                         <h6 class="text-5 fw-400 mb-3 mb-sm-4">Workato
   
@@ -1487,6 +1391,147 @@
 
 
 
+
+
+
+
+    <div class="modal fade " id="tooltipmodal" tabindex="-1" aria-labelledby="tooltipmodal" aria-modal="true" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Pay for the package</h5>
+            <button class="btn-close py-0" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="card-body">
+              <div class="">
+                  <div class="card-header">
+                      <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                          <!-- Credit card form tabs -->
+                          <ul role="tablist" class="nav nav-tabs" id="icon-tab" role="tablist">
+                              <li class="nav-item"> <a id="icon-home-tab" data-bs-toggle="tab" href="#icon-home" role="tab" aria-controls="icon-home" aria-selected="true" class="nav-link active "><i class='bx bxl-bitcoin' style="font-size: 20px;"></i>Bitcoin </a> </li>
+                              <li class="nav-item"> <a id="profile-icon-tabs" data-bs-toggle="tab" href="#profile-icon" role="tab" aria-controls="profile-icon" aria-selected="false" class="nav-link "> <i class='bx bxl-paypal' style="font-size: 20px;"></i>Paypal </a> </li>
+                              <li class="nav-item"> <a id="contact-icon-tab" data-bs-toggle="tab" href="#contact-icon" role="tab" aria-controls="contact-icon" aria-selected="false" class="nav-link "> <i class='bx bxs-wallet-alt' style="font-size: 20px;"></i>Wallet </a> </li>
+                          </ul>
+                      </div> <!-- End -->
+                      <!-- Credit card form content -->
+                      <div class="tab-content" id="icon-tabContent">
+                          <!-- credit card info-->
+                          <div id="icon-home" role="tabpanel" aria-labelledby="icon-home-tab" class="tab-pane fade show active pt-3">
+
+                              <form role="form" onsubmit="event.preventDefault()">
+                                <div class="text-center">
+                                  <h5>Pay via Bitcoin</h5> 
+                                 </div>
+
+                                  <div class="mb-3">
+                                    <label class="form-label">Send To Address:</label>
+                                    <div class="input-group">
+                                      <input class="form-control" id="clipboardExample1" type="text" value="3JbVqM8NGTuvfuB2LWJQAQFsbyej81vbYx" aria-label="Recipient's username">
+                                      <span type="button" data-clipboard-action="copy" data-clipboard-target="#clipboardExample1" class="input-group-text list-light-danger btn-clipboard" style="cursor: pointer;">
+                                        Copy <i class="fa fa-copy"></i></span>
+                                    </div>
+                                  </div>
+    
+                                  <div class="qr-code">
+                                    <div class="qr-code1 text-center" style="margin: 5px;">
+                                       <button type = "button"  class ="center-block button btn btn-pill btn-light" id = "generate">  
+                                        <i class='bx bx-qr'></i>Generate QR Code 
+                                       </button>  
+                                       
+                                       <button type="button" class="butss button btn btn-pill btn-light" >  
+                                        <i class='bx bxs-download'></i>Download QR Code 
+                                       </button>  
+                       
+                                   </div> <br>
+                                     
+                                   <div class="qr text-center" id="qr-code" >
+                                    <img src =  ""   class = "qr-code downloadimage img-thumbnail img-responsive" />       
+                                  </div>
+                                  </div>
+                                  <br>
+                                 
+                                  <div class="card-footer"> 
+                              </form>
+
+                          </div>
+                      </div> <!-- End -->
+                      <!-- Paypal info -->
+                      <div  id="profile-icon" role="tabpanel" aria-labelledby="profile-icon-tabs" class="tab-pane fade pt-3">
+                          <h6 class="pb-2">Select your paypal account type</h6>
+                          <div class="form-group "> <label class="radio-inline"> <input type="radio" name="optradio" checked> Domestic </label> <label class="radio-inline"> <input type="radio" name="optradio" class="ml-5">International </label></div>
+                          <p> <button type="button" class="btn btn-primary "><i class="fab fa-paypal mr-2"></i> Log into my Paypal</button> </p>
+                          <p class="text-muted"> Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </p>
+                      </div> <!-- End -->
+                      <!-- bank transfer info -->
+                      <div id="contact-icon" role="tabpanel" aria-labelledby="contact-icon-tab" class="tab-pane fade pt-3">
+                          <div class="form-group "> 
+                             </div>
+
+                              <div class="accordion dark-accordion" id="accordionExample-a">
+                                <div class="accordion-item">
+                                  <h2 class="accordion-header" id="headingOne-a">
+                                    <button class="accordion-button accordion-light-primary txt-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne-a" aria-expanded="false" aria-controls="collapseOne-a">WALLET<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down svg-color"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+                                  </h2>
+                                  <div class="accordion-collapse collapse" id="collapseOne-a" aria-labelledby="headingOne-a" data-bs-parent="#accordionExample-a" style="">
+                                    <div class="accordion-body weight-title card-wrapper">
+                                      <h6 class="f-14">SELECT YOUR WALLET</h6>
+                                      <div class="row choose-bank">
+                                        <div class="col-sm-6">
+                                          <div class="form-check radio radio-primary">
+                                            <input class="form-check-input" id="flexRadioDefault-z" type="radio" name="flexRadioDefault-v">
+                                            <label class="form-check-label" for="flexRadioDefault-z">Industrial &amp; Commercial Bank</label>
+                                          </div>
+                                          <div class="form-check radio radio-primary">
+                                            <input class="form-check-input" id="flexRadioDefault-y" type="radio" name="flexRadioDefault-v">
+                                            <label class="form-check-label" for="flexRadioDefault-y">Agricultural Bank</label>
+                                          </div>
+                                          <div class="form-check radio radio-primary">
+                                            <input class="form-check-input" id="flexRadioDefault-x" type="radio" name="flexRadioDefault-v" checked="">
+                                            <label class="form-check-label" for="flexRadioDefault-x">JPMorgan Chase &amp; Co.</label>
+                                          </div>
+                                        </div>
+                                        <div class="col-sm-6"> 
+                                          <div class="form-check radio radio-primary">
+                                            <input class="form-check-input" id="flexRadioDefault-w" type="radio" name="flexRadioDefault-v">
+                                            <label class="form-check-label" for="flexRadioDefault-w">Construction Bank Corp.</label>
+                                          </div>
+                                          <div class="form-check radio radio-primary">
+                                            <input class="form-check-input" id="flexRadioDefault-v" type="radio" name="flexRadioDefault-v">
+                                            <label class="form-check-label" for="flexRadioDefault-v">Bank of America</label>
+                                          </div>
+                                          <div class="form-check radio radio-primary">
+                                            <input class="form-check-input" id="flexRadioDefault-u" type="radio" name="flexRadioDefault-v">
+                                            <label class="form-check-label" for="flexRadioDefault-u">HDFC Bank</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                                <br>
+
+
+                          <div class="form-group">
+                              <p> <button type="button" class="btn btn-primary "><i class="fas fa-mobile-alt mr-2"></i> Proceed Payment</button> </p>
+                          </div>
+                          <p class="text-muted">Note: After clicking on the button, you will be directed to a secure gateway for payment. After completing the payment process, you will be redirected back to the website to view details of your order. </p>
+                      </div> <!-- End -->
+                      <!-- End -->
+                  </div>
+              </div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-primary" type="button">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <!-- latest jquery-->
     <script src="assets/js/jquery.min.js"></script>
     <!-- Bootstrap js-->
@@ -1523,6 +1568,8 @@
     <script src="assets/js/dashboard/dashboard_2.js"></script>
     <script src="assets/js/counter/counter-custom.js"></script>
     <script src="assets/js/counter/jquery.counterup.min.js"></script>
+    <script src="assets/js/clipboard/clipboard.min.js"></script>
+    <script src="assets/js/clipboard/clipboard-script.js"></script>
 
     <script src="assets/js/invest.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
