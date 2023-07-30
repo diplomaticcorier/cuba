@@ -466,6 +466,10 @@
                       <ion-icon name="exit-outline"></ion-icon>
                       <span>Logout</span></a>
                     </li>
+
+                    <div class="copyright2">
+                      <p style="color: black;"><strong> ©2023 — Raw Trading Ltd</strong> © 2021 All Rights Reserved</p>
+                    </div>
               </ul>
             </div>
             <div class="right-arrow" id="right-arrow">
@@ -567,182 +571,6 @@
           </section>
           <!--/ CIC -->
 
-            <!-- Purchase with BTC Modal -->
-            <div class="modal fade" id="purchaseBTCModalLabel" tabindex="-1" role="dialog" aria-labelledby="purchaseBTCModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title" id="purchaseModalLabel">Buy with Bitcoin</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">×</span>
-                          </button>
-                      </div>
-                      <div class="modal-body">
-                          <div class="card-content">
-                              <div class="card-body">
-                                  <div class="col-12">
-                                      <div class="row">
-                                          <div class="col-md-2 col-12 d-none d-md-block">
-                                              <div class="crypto-circle rounded-circle">
-                          <img style="width: 90%;" class="img-box" src="assets/images/btc/toppng.com-bitcoin-logo-png-transparent-background-720x720.png">
-                                              </div>
-                                          </div>
-                                          <div class="col-md-8 col-12">
-                                              <p><strong>Bitcoin</strong></p>
-                                              <input id="popupone" class="form-control" value="3JbVqM8NGTuvfuB2LWJQAQFsbyej81vbYx"><br>
-                                              <button onclick="popupone()" type="button" class="btn btn-warning round mr-1 mb-0">Copy</button>
-                                          </div>
-                                          <div class="col-md-2 col-12 d-none d-md-block">
-                                              <img src="assets/images/btc/mt btc wallet.png" style="width: 100%;">
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-          
-                          <form class="form form-horizontal mt-2 mx-2">
-                              <div class="form-body">
-                                  <div class="row">
-                    <div class="col-md-5 col-xl-6 col-12">
-                      <p><strong>Bitcoin Price:</strong></p>
-                      <h1 class="text-danger">$<span id="bitcoin"></span></h1>
-                      <p class="mb-0 text-danger">+251,892.13 (2.03%)  today.</p>
-                    </div>
-                                  </div>
-                              </div>
-                          </form>
-                          <p class="font-italic mx-1 mb-2">The calculator uses the effective USD price, which is based on the price 1 USD = 0.0000142 BTC and 15% bonus.</p>
-                          <h6 class="mx-1">4 step guide</h6>
-                          <ol>
-                              <li>Calculate how much tokens you want to buy.</li>
-                              <li>Copy/Scan the displayed address</li>
-                              <li>Send your BTC to that address. You may send it right from your exchange.</li>
-                              <li>Upon transaction confirmation, you will see the tokens in your wallet balance.</li>
-                          </ol>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <!--/ Purchase with BTC Modal -->
-           <!-- Purchase with ETH Modal -->
-           <div class="modal fade" id="purchaseETHModalLabel" tabindex="-1" role="dialog" aria-labelledby="purchaseETHModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="purchaseModalLabel">Buy with Ethereum</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-md-2 col-12 d-none d-md-block">
-                                            <div class="crypto-circle rounded-circle">
-                        <img class="img-box" style="width: 90%;" src="assets/images/btc/Ethereum.svg">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 col-12">
-                                            <p><strong>Etherium</strong></p>
-                                            <input id="popuptwo" class="form-control" value="0x7171ed53F25EeD7dacee780C4acAC100717081D4"><br>
-                                            <button onclick="popuptwo()" type="button" class="btn btn-warning round mr-1 mb-0">Copy</button>
-                                        </div>
-                                        <div class="col-md-2 col-12 d-none d-md-block">
-                      <img src="assets/images/btc/my eth wallet.png" style="width: 100%;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <form class="form form-horizontal mt-2 mx-2">
-                            <div class="form-body">
-                <div class="row">
-                  <div class="col-md-5 col-xl-6 col-12">
-                    <p><strong>Etherium Price:</strong></p>
-                    <h1 class="text-success">$<span id="ethereum"></span></h1>
-                    <p class="mb-0 text-success">+15,813.04 (1.91%)  today.</p>
-                  </div>
-                                </div>
-                            </div>
-                        </form>
-                        <p class="font-italic mx-1 mb-2">The calculator uses the effective USD price, which is based on the price 1 USD = 0.0000142 ETH and 15% bonus.</p>
-                        <h6 class="mx-1">4 step guide</h6>
-                        <ol>
-                            <li>Calculate how much tokens you want to buy.</li>
-                            <li>Copy/Scan the displayed address</li>
-                            <li>Send your ETH to that address. You may send it right from your exchange.</li>
-                            <li>Upon transaction confirmation, you will see tokens in your wallet balance.</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ Purchase with ETH Modal -->
-        
-        <!-- Purchase with USDT Modal -->
-        <div class="modal fade" id="purchaseUSDTModalLabel" tabindex="-1" role="dialog" aria-labelledby="purchaseUSDTModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="purchaseModalLabel">Buy with Litecoin</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="card-content">
-                            <div class="card-body">
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-md-2 col-12 d-none d-md-block">
-                                            <div class="crypto-circle rounded-circle">
-                        <img class="img-box" src="assets/images/btc/kisspng-brand-trademark-logo-litecoin-5ab08895614eb2.5897641015215187413986.png"  style="width: 90%;">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 col-12">
-                                            <p><strong>Litecoin</strong></p>
-                                            <input id="popupthree" class="form-control" value="MRhL6etfpSZ4dyrJZAiNgzCbX7aFMkPun5"><br>
-                                            <button onclick="popupthree()" type="button" class="btn btn-warning round mr-1 mb-0">Copy</button>
-                                        </div>
-                                        <div class="col-md-2 col-12 d-none d-md-block">
-                      <img src="assets/images/btc/my eth wallet.png" style="width: 100%;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <form class="form form-horizontal mt-2 mx-2">
-                            <div class="form-body">
-                                <div class="row">
-                  <div class="col-md-5 col-xl-6 col-12">
-                    <p><strong>Litecoin Price:</strong></p>
-                    <h1 class="text-danger">$<span id="litecoin"></span></h1>
-                    <p class="mb-0 text-danger">+1.16 (0.25%)  today.</p>
-                  </div>
-                                </div>
-                            </div>
-                        </form>
-                        <p class="font-italic mx-1 mb-2">The calculator uses the effective USD price, which is based on the price 1 USD = 0.0000142 LTC and 15% bonus.</p>
-                        <h6 class="mx-1">4 step guide</h6>
-                        <ol>
-                            <li>Calculate how much tokens you want to buy.</li>
-                            <li>Copy/Scan the displayed address</li>
-                            <li>Send your LTC to that address. You may send it right from your exchange.</li>
-                            <li>Upon transaction confirmation, you will see tokens in your wallet balance.</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ Purchase with USDT Modal -->
-
-
-
-
           <h3 class="mt-4">Crypto Currency</h3>
           <p>To buy Crypto Currency, transfer ETH or BTC to your personal deposit address:</p>
           <!-- Bitcoin -->
@@ -770,10 +598,7 @@
                   </div>
               </div>
           </section>
-          <!--/ Bitcoin -->
-
- 
-          <!-- Ethereum -->
+          <!--/ Bitcoin -->          <!-- Ethereum -->
           <section class="card pull-up">
               <div class="card-content">
                   <div class="card-body">
@@ -930,6 +755,174 @@
       </div>
     </div>
 
+      <!-- Purchase with BTC Modal -->
+      <div  id="purchaseBTCModalLabel" class="modal fade " role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="purchaseModalLabel">Buy with Bitcoin</h5>
+                    <button type="button" class="btn-close float-end" data-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-md-2 col-12 d-none d-md-block">
+                                        <div class="crypto-circle rounded-circle">
+                    <img style="width: 90%;" class="img-box" src="assets/images/btc/toppng.com-bitcoin-logo-png-transparent-background-720x720.png">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-12">
+                                        <p><strong>Bitcoin</strong></p>
+                                        <input id="popupone" class="form-control" value="3JbVqM8NGTuvfuB2LWJQAQFsbyej81vbYx"><br>
+                                        <button onclick="popupone()" type="button" class="btn btn-warning round mr-1 mb-0">Copy</button>
+                                    </div>
+                                    <div class="col-md-2 col-12 d-none d-md-block">
+                                        <img src="assets/images/btc/mt btc wallet.png" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <form class="form form-horizontal mt-2 mx-2">
+                        <div class="form-body">
+                            <div class="row">
+              <div class="col-md-5 col-xl-6 col-12">
+                <p><strong>Bitcoin Price:</strong></p>
+                <h1 class="text-danger">$<span id="bitcoin"></span></h1>
+                <p class="mb-0 text-danger">+251,892.13 (2.03%)  today.</p>
+              </div>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="font-italic mx-1 mb-2">The calculator uses the effective USD price, which is based on the price 1 USD = 0.0000142 BTC and 15% bonus.</p>
+                    <h6 class="mx-1">4 step guide</h6>
+                    <ol>
+                        <li>Calculate how much tokens you want to buy.</li>
+                        <li>Copy/Scan the displayed address</li>
+                        <li>Send your BTC to that address. You may send it right from your exchange.</li>
+                        <li>Upon transaction confirmation, you will see the tokens in your wallet balance.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ Purchase with BTC Modal -->
+
+       <!-- Purchase with USDT Modal -->
+       <div id="purchaseUSDTModalLabel" class="modal fade " role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="purchaseModalLabel">Buy with Litecoin</h5>
+                    <button type="button" class="btn-close float-end" data-dismiss="modal" aria-label="Close">
+                </div>
+                <div class="modal-body">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-md-2 col-12 d-none d-md-block">
+                                        <div class="crypto-circle rounded-circle">
+                    <img class="img-box" src="assets/images/btc/kisspng-brand-trademark-logo-litecoin-5ab08895614eb2.5897641015215187413986.png"  style="width: 90%;">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-12">
+                                        <p><strong>Litecoin</strong></p>
+                                        <input id="popupthree" class="form-control" value="MRhL6etfpSZ4dyrJZAiNgzCbX7aFMkPun5"><br>
+                                        <button onclick="popupthree()" type="button" class="btn btn-warning round mr-1 mb-0">Copy</button>
+                                    </div>
+                                    <div class="col-md-2 col-12 d-none d-md-block">
+                  <img src="assets/images/btc/my eth wallet.png" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <form class="form form-horizontal mt-2 mx-2">
+                        <div class="form-body">
+                            <div class="row">
+              <div class="col-md-5 col-xl-6 col-12">
+                <p><strong>Litecoin Price:</strong></p>
+                <h1 class="text-danger">$<span id="litecoin"></span></h1>
+                <p class="mb-0 text-danger">+1.16 (0.25%)  today.</p>
+              </div>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="font-italic mx-1 mb-2">The calculator uses the effective USD price, which is based on the price 1 USD = 0.0000142 LTC and 15% bonus.</p>
+                    <h6 class="mx-1">4 step guide</h6>
+                    <ol>
+                        <li>Calculate how much tokens you want to buy.</li>
+                        <li>Copy/Scan the displayed address</li>
+                        <li>Send your LTC to that address. You may send it right from your exchange.</li>
+                        <li>Upon transaction confirmation, you will see tokens in your wallet balance.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ Purchase with USDT Modal -->
+
+      <!-- Purchase with ETH Modal -->
+      <div  id="purchaseETHModalLabel" class="modal fade " role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="purchaseModalLabel">Buy with Ethereum</h5>
+                    <button type="button" class="btn-close float-end" data-dismiss="modal" aria-label="Close">
+                </div>
+                <div class="modal-body">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-md-2 col-12 d-none d-md-block">
+                                        <div class="crypto-circle rounded-circle">
+                    <img class="img-box" style="width: 90%;" src="assets/images/btc/Ethereum.svg">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-12">
+                                        <p><strong>Etherium</strong></p>
+                                        <input id="popuptwo" class="form-control" value="0x7171ed53F25EeD7dacee780C4acAC100717081D4"><br>
+                                        <button onclick="popuptwo()" type="button" class="btn btn-warning round mr-1 mb-0">Copy</button>
+                                    </div>
+                                    <div class="col-md-2 col-12 d-none d-md-block">
+                  <img src="assets/images/btc/my eth wallet.png" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <form class="form form-horizontal mt-2 mx-2">
+                        <div class="form-body">
+            <div class="row">
+              <div class="col-md-5 col-xl-6 col-12">
+                <p><strong>Etherium Price:</strong></p>
+                <h1 class="text-success">$<span id="ethereum"></span></h1>
+                <p class="mb-0 text-success">+15,813.04 (1.91%)  today.</p>
+              </div>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="font-italic mx-1 mb-2">The calculator uses the effective USD price, which is based on the price 1 USD = 0.0000142 ETH and 15% bonus.</p>
+                    <h6 class="mx-1">4 step guide</h6>
+                    <ol>
+                        <li>Calculate how much tokens you want to buy.</li>
+                        <li>Copy/Scan the displayed address</li>
+                        <li>Send your ETH to that address. You may send it right from your exchange.</li>
+                        <li>Upon transaction confirmation, you will see tokens in your wallet balance.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ Purchase with ETH Modal -->
 
 
     <!-- latest jquery-->
