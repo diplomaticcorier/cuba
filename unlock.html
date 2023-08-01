@@ -60,31 +60,46 @@
                 <div>
                   <div><a class="logo" href="index.html">
                     <img class="img-fluid for-light" src="assets/images/logo/logo.png" alt="looginpage"><img class="img-fluid for-dark" src="../assets/images/logo/logo_dark.png" alt="looginpage"></a></div>
-                  <div class="login-main">
-                    <form class="theme-form">
-                      <h4>Unlock                          </h4>
-                      <div class="form-group">
-                        <label class="col-form-label">Enter your Password</label>
-                        <div class="form-input position-relative">
-                          <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
-                          <div class="show-hide"><span class="show">                      </span></div>
-                        </div>
+                  <div class="login-main col-12">
+                    <div class="position-relative">
+                      <div class=" p-2 text-center">
+                        <form action="dashboard.html" method="get">
+                          <h6>Please enter the one time Generated OTP <br> Code to verify your account</h6>
+                          <div> <span>Click "Generate OTP" to get the code</span> <strong class="text-success"> <span id="otp"></span></strong> </div>
+                          <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2"> <input class="m-2 text-center form-control rounded" type="text" id="first" maxlength="1" required /> <input class="m-2 text-center form-control rounded" type="text" id="second" required maxlength="1" required /> <input class="m-2 text-center form-control rounded" type="text" id="third" maxlength="1" required /> <input class="m-2 text-center form-control rounded" type="text" id="fourth" maxlength="1" required /> <input class="m-2 text-center form-control rounded" type="text" id="fifth" maxlength="1" required /> <input class="m-2 text-center form-control rounded" type="text" id="sixth" maxlength="1" required  /> </div>
+                          <div class="mt-4"> 
+                            <button class="btn btn-danger px-4 validate" type="submit">Validate</button> 
+                            <button class="btn btn-success px-4 validate" onclick="generateOTP()" type="button">Generate OTP</button>
+                          </div>
+                        </form>                        
                       </div>
-                      <div class="form-group mb-0">
-                        <div class="checkbox p-0">
-                          <input id="checkbox1" type="checkbox">
-                          <label class="text-muted" for="checkbox1">Remember password</label>
-                        </div>
-                        <button class="btn btn-primary btn-block w-100" type="submit">Unlock</button>
-                      </div>
-                      <p class="mt-4 mb-0">Already Have an account?<a class="ms-2" href="login.html">Sign in</a></p>
-                    </form>
+                  </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <script>
+          function generateOTP() {
+    let element = document.querySelector('#otp');
+    
+    var digits = '0123456789';
+    let otp = '';
+    for (let i = 0; i < 6;i++){
+        otp += digits[Math.floor(Math.random() * 10)];
+    }
+    element.innerHTML = otp;
+}
+        </script>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function(event) {
+
+function OTPInput() {
+const inputs = document.querySelectorAll('#otp > *[id]');
+for (let i = 0; i < inputs.length; i++) { inputs[i].addEventListener('keydown', function(event) { if (event.key==="Backspace" ) { inputs[i].value='' ; if (i !==0) inputs[i - 1].focus(); } else { if (i===inputs.length - 1 && inputs[i].value !=='' ) { return true; } else if (event.keyCode> 47 && event.keyCode < 58) { inputs[i].value=event.key; if (i !==inputs.length - 1) inputs[i + 1].focus(); event.preventDefault(); } else if (event.keyCode> 64 && event.keyCode < 91) { inputs[i].value=String.fromCharCode(event.keyCode); if (i !==inputs.length - 1) inputs[i + 1].focus(); event.preventDefault(); } } }); } } OTPInput(); });
+        </script>
         <!-- Unlock page end-->
         <!-- page-wrapper Ends-->
         <!-- latest jquery-->
