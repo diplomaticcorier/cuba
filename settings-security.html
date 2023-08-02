@@ -605,12 +605,21 @@
                       <!-- Profile Details
                       =============================== -->
                       <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
-                        <div class="profile-thumb mt-3 mb-4"> <img class="rounded-circle" src="assets/images/icons8-male-user-100.png" alt="">
-                          <div class="profile-thumb-edit bg-primary text-white" data-bs-toggle="tooltip" title="" data-bs-original-title="Change Profile Picture">
-                            <ion-icon class=" position-absolute"  name="camera-outline"></ion-icon>
-                            <input type="file" class="custom-file-input" id="customFile">
+                        <div class=""> 
+                          <div class=" g-3 avatar-upload">
+                            <div class="col-12">
+                              <div>
+                                <div class="avatar-edit">
+                                  <input id="imageUpload" type="file" accept=".png, .jpg, .jpeg">
+                                  <label for="imageUpload"></label>
+                                </div>
+                                <div class="avatar-preview">
+                                  <div id="image"></div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
+                        </div> <br>
                         <p class="text-3 fw-500 mb-2">Hello, Smith Rhodes</p>
                         <p class="mb-2"><a href="settings-profile.html" class="text-5 text-light" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit Profile" aria-label="Edit Profile">
                             <ion-icon style="color: rgb(11, 10, 10);" name="create-outline"></ion-icon>
@@ -658,6 +667,8 @@
                         <div class="d-grid"><a href="#Order-Card" data-bs-toggle="modal" class="btn btn-primary">Order Now</a></div>
                       </div>
                       <!-- Order Card End --> 
+
+                   
 
 
                                <!--oder card pop up -------------------------------->
@@ -1090,7 +1101,7 @@
           <div class="modal-body"> 
             <div class="modal-toggle-wrapper card">  
               <ul class="modal-img">
-                <li> <img src="https://i.imgur.com/QOi7Nie.png" width="80">
+                <li> <img src="assets/images/gif/successful.gif" width="80">
                 </li>
               </ul> <br>
               <h5 class="text-center text-success pb-2">You have successfully ordered a prepaid MasterCard</h5>
@@ -1629,7 +1640,30 @@
                             </div>
                             <hr class="mx-n4 mb-4">
 
-                        <div class="card card-bordered"><table class="table table-ulogs"><thead class="table-light"><tr><th class="tb-col-os"><span class="overline-title">Browser <span class="d-sm-none">/ IP</span></span></th><th class="tb-col-ip"><span class="overline-title">IP</span></th><th class="tb-col-time"><span class="overline-title">Time</span></th><th class="tb-col-action"><span class="overline-title">&nbsp;</span></th></tr></thead><tbody><tr><td class="tb-col-os">Chrome on Window</td><td class="tb-col-ip"><span class="sub-text">192.149.122.128</span></td><td class="tb-col-time"><span class="sub-text">11:34 PM</span></td><td class="tb-col-action"></td></tr><tr><td class="tb-col-os">Mozilla on Window</td><td class="tb-col-ip"><span class="sub-text">86.188.154.225</span></td><td class="tb-col-time"><span class="sub-text">Nov 20, 2019 <span class="d-none d-sm-inline-block">10:34 PM</span></span></td><td class="tb-col-action"><a href="#" class="link-cross me-sm-n1"><em class="icon ni ni-cross"></em></a></td></tr><tr><td class="tb-col-os">Chrome on iMac</td><td class="tb-col-ip"><span class="sub-text">192.149.122.128</span></td><td class="tb-col-time"><span class="sub-text">Nov 12, 2019 <span class="d-none d-sm-inline-block">08:56 PM</span></span></td><td class="tb-col-action"><a href="#" class="link-cross me-sm-n1"><em class="icon ni ni-cross"></em></a></td></tr></tbody></table></div>
+                        <div class="card card-bordered">
+                          <table class="table table-ulogs">
+                            <thead class="table-light"><tr>
+                              <th class="tb-col-os">
+                                <span class="overline-title">Browser <span class="d-sm-none">/ IP</span></span></th><th class="tb-col-ip"><span class="overline-title">IP</span></th><th class="tb-col-time"><span class="overline-title">Time</span></th><th class="tb-col-action"><span class="overline-title">&nbsp;</span></th></tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="tb-col-os text-success">This device</td>
+                                  <td class="tb-col-ip"><span class="sub-text" id="gfg"></span></td>
+                                  <td class="tb-col-time"><span class="sub-text">Now</span></td>
+                                  <td class="tb-col-action"></td></tr>
+                                <tr>
+                                  <td class="tb-col-os">Mozilla on Window</td>
+                                  <td class="tb-col-ip"><span class="sub-text">86.188.154.225</span></td>
+                                  <td class="tb-col-time"><span class="sub-text">Yesterday
+                                    <span class="d-none d-sm-inline-block">10:34 PM</span></span></td>
+                                    <td class="tb-col-action">
+                                      <a href="#" class="link-cross me-sm-n1">
+                                        <em class="icon ni ni-cross"></em></a></td></tr>
+                                 
+                                      </tbody>
+                                    </table>
+                                  </div>
                           </div>
 
 
@@ -1826,6 +1860,27 @@
     </div>
 
 
+
+
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+     
+      <script>
+     
+    /* Add "https://api.ipify.org?format=json" statement
+               this will communicate with the ipify servers in
+               order to retrieve the IP address $.getJSON will
+               load JSON-encoded data from the server using a
+               GET HTTP request */
+                
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+        // Setting text of element P with id gfg
+        $("#gfg").html(data.ip);
+    })
+    </script>
+
     <!-- latest jquery-->
     <script src="assets/js/jquery.min.js"></script>
     <!-- Bootstrap js-->
@@ -1860,6 +1915,8 @@
     <script src="assets/js/animation/wow/wow.min.js"></script>
     <script src="assets/js/form-wizard/verification.js"></script>
     <script src="assets/js/tooltip-init.js"></script>
+    <script src="assets/js/form-wizard/form-wizard.js"></script>
+    <script src="assets/js/form-wizard/image-upload.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="assets/js/script.js"></script>
