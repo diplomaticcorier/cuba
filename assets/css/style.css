@@ -262,7 +262,11 @@ body.dark-only.box-layout {
 .f-light {
   color: rgba(82, 82, 108, 0.8);
 }
-
+.copyright2 {
+  font-size: 14px;
+  padding:25px;
+  color: #969BA0;
+   }
 svg.f-light {
   fill: #52526c;
   opacity: 0.8;
@@ -8310,7 +8314,7 @@ btn-group .dropdown-wrapper .input-group .input-group-text {
   margin: auto;
 }
 .avatar-upload div:first-child .avatar-preview > div {
-  background-image: url("../images/forms/user.png");
+  background-image: url(../../assets/images/forms/user.png);
   width: 100%;
   height: 100%;
   border-radius: 100%;
