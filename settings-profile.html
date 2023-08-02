@@ -602,12 +602,21 @@
                       <!-- Profile Details
                       =============================== -->
                       <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
-                        <div class="profile-thumb mt-3 mb-4"> <img class="rounded-circle" src="assets/images/icons8-male-user-100.png" alt="">
-                          <div class="profile-thumb-edit bg-primary text-white" data-bs-toggle="tooltip" title="" data-bs-original-title="Change Profile Picture">
-                            <ion-icon class=" position-absolute"  name="camera-outline"></ion-icon>
-                            <input type="file" class="custom-file-input" id="customFile">
+                        <div class=""> 
+                          <div class=" g-3 avatar-upload">
+                            <div class="col-12">
+                              <div>
+                                <div class="avatar-edit">
+                                  <input id="imageUpload" type="file" accept=".png, .jpg, .jpeg">
+                                  <label for="imageUpload"></label>
+                                </div>
+                                <div class="avatar-preview">
+                                  <div id="image"></div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
+                        </div> <br>
                         <p class="text-3 fw-500 mb-2">Hello, Smith Rhodes</p>
                         <p class="mb-2"><a href="settings-profile.html" class="text-5 text-light" data-bs-toggle="tooltip" title="" data-bs-original-title="Edit Profile" aria-label="Edit Profile">
                             <ion-icon style="color: rgb(11, 10, 10);" name="create-outline"></ion-icon>
@@ -2783,6 +2792,8 @@
     <script src="assets/js/typeahead-search/typeahead-custom.js"></script>
     <script src="assets/js/height-equal.js"></script>
     <script src="assets/js/animation/wow/wow.min.js"></script>
+    <script src="assets/js/form-wizard/image-upload.js"></script>
+
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="assets/js/script.js"></script>
